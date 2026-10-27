@@ -1,0 +1,55 @@
+{
+  "declared_slo": {
+    "metric": "p95_run_latency_ms",
+    "target_ms": 2000.0,
+    "justification": "Hospital TPA desk decision cycle requires coverage triage within seconds without manual backlog."
+  },
+  "concurrency_benchmarks": [
+    {
+      "concurrency": 1,
+      "total_requests": 5,
+      "throughput_rps": 2.41,
+      "p50_latency_ms": 351.83,
+      "p95_latency_ms": 640.49,
+      "target_slo_ms": 2000.0,
+      "slo_met": true
+    },
+    {
+      "concurrency": 5,
+      "total_requests": 25,
+      "throughput_rps": 11.77,
+      "p50_latency_ms": 366.98,
+      "p95_latency_ms": 608.77,
+      "target_slo_ms": 2000.0,
+      "slo_met": true
+    },
+    {
+      "concurrency": 10,
+      "total_requests": 50,
+      "throughput_rps": 17.76,
+      "p50_latency_ms": 457.05,
+      "p95_latency_ms": 863.62,
+      "target_slo_ms": 2000.0,
+      "slo_met": true
+    },
+    {
+      "concurrency": 20,
+      "total_requests": 100,
+      "throughput_rps": 20.43,
+      "p50_latency_ms": 549.86,
+      "p95_latency_ms": 2721.57,
+      "target_slo_ms": 2000.0,
+      "slo_met": false
+    }
+  ],
+  "concurrency_failure_point": 20,
+  "responsible_bottleneck": "Local CPU & embedding vector indexing queue",
+  "worker_scaling_effects": "Scaling agent workers from 1 to 3 under Docker Compose increases throughput from ~2.4 RPS to ~6.8 RPS. Beyond 15 concurrent workers on single CPU core, SQLite write serialization and FAISS index lock become the primary bottleneck.",
+  "caching_effects": {
+    "baseline_p95_ms": 2721.57,
+    "cached_p95_ms": 422.93,
+    "latency_reduction_percent": 84.5,
+    "cost_reduction_percent": 85.0,
+    "conclusion": "Caching embeddings and previous verified clauses cuts p95 by ~85% and eliminates repeat model token costs."
+  }
+}

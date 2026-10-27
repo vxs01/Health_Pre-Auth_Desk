@@ -1,0 +1,44 @@
+{
+  "corpus_name": "HDFC ERGO Retail Health Policy Corpus",
+  "last_built_at": "2026-10-27T15:55:22.170035Z",
+  "total_documents": 2,
+  "total_pages": 32,
+  "total_chunks": 32,
+  "index_build_duration_seconds": 1.006,
+  "pipeline_throughput_pages_per_sec": 31.81,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "vector_dimension": 384,
+  "index_type": "FAISS-IndexFlatIP + BM25Okapi",
+  "documents": [
+    {
+      "document_name": "hdfc_ergo_optima_restore_policy_wording.pdf",
+      "product_name": "HDFC ERGO Optima Restore",
+      "uin": "HDFHLIP22193V072122",
+      "version_date": "2021-07-21",
+      "source_url": "https://customer-portal-assets.hdfcergo.com/documents/13.optima-restore-old-109940947605.pdf",
+      "description": "Full Retail Policy Wording with Inpatient Benefits, Waiting Periods, Exclusions, and Schedule of Benefits.",
+      "file_checksum_sha256": "d1f2ddb544126975e0d549c5910f4fb0faae64b7d99c4d2ceed1e4bf9cc2b1bd",
+      "file_size_bytes": 212121,
+      "page_count": 28,
+      "chunk_count": 28,
+      "extraction_method": "PyMuPDF-TextLayer",
+      "ocr_applied": false,
+      "processing_status": "INDEXED"
+    },
+    {
+      "document_name": "hdfc_ergo_day_care_procedures_list.pdf",
+      "product_name": "HDFC ERGO Day Care Procedures Schedule",
+      "uin": "HDFHLIP22193V072122",
+      "version_date": "2022-01-01",
+      "source_url": "https://www.hdfcergo.com/downloads/day-care-procedures",
+      "description": "Comprehensive Categorized Schedule of Day Care Procedures matching Optima Restore / Health Suraksha.",
+      "file_checksum_sha256": "3883e102ed11fbe42dfb7720f49529af86521cc6b6900a4d37ef97e23a24efef",
+      "file_size_bytes": 22976,
+      "page_count": 4,
+      "chunk_count": 4,
+      "extraction_method": "PyMuPDF-TextLayer",
+      "ocr_applied": false,
+      "processing_status": "INDEXED"
+    }
+  ]
+}

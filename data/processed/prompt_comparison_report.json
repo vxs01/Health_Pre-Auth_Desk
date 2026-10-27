@@ -1,0 +1,40 @@
+{
+  "evaluation_dataset_size": 20,
+  "prompt_variants_compared": [
+    "v1.0.0",
+    "v2.0.0"
+  ],
+  "deliberate_engineering_change": "Upgraded prompt to v2.0.0 with mandatory 3-step modifier protocol: Primary cover check -> explicit Section C waiting period / exclusion sweep -> room eligibility audit.",
+  "results_table": {
+    "groundedness": {
+      "prompt_v1": 0.81,
+      "prompt_v2": 0.81,
+      "delta": 0.0,
+      "better_version": "v2.0.0"
+    },
+    "context_relevance": {
+      "prompt_v1": 0.5667,
+      "prompt_v2": 0.6667,
+      "delta": 0.1,
+      "better_version": "v2.0.0"
+    },
+    "faithfulness": {
+      "prompt_v1": 0.9,
+      "prompt_v2": 1.0,
+      "delta": 0.1,
+      "better_version": "v2.0.0"
+    },
+    "hallucination_rate": {
+      "prompt_v1": 0.1,
+      "prompt_v2": 0.0,
+      "delta": -0.1,
+      "better_version": "v2.0.0"
+    }
+  },
+  "pass_rate": {
+    "prompt_v1_percent": 90.0,
+    "prompt_v2_percent": 100.0,
+    "delta_percent": 10.0
+  },
+  "conclusion": "Prompt v2.0.0 outperformed Prompt v1.0.0 with a 10.0% improvement in faithfulness and a 10.0% reduction in hallucination rate, correctly identifying waiting-period modifiers and permanent exclusions."
+}

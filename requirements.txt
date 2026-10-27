@@ -1,0 +1,19 @@
+# Production Dependencies for Health Insurance Pre-Authorisation Desk
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+langchain>=0.2.0
+langgraph>=0.2.0
+faiss-cpu>=1.8.0
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+pymupdf>=1.24.0
+sqlalchemy>=2.0.0
+redis>=5.0.0
+prometheus-client>=0.20.0
+opentelemetry-api>=1.25.0
+opentelemetry-sdk>=1.25.0
+httpx>=0.27.0
+locust>=2.29.0
+pytest>=8.0.0
